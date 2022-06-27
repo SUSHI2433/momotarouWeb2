@@ -1,3 +1,5 @@
+
+
 body{
     color: #333;
     margin: 0;
@@ -18,6 +20,7 @@ body{
     align-items: center;
     display: flex;
     padding: 0 16px;
+    
   }
   
   /* ぼくの世界わエトワールﾄﾞ　タイトル */
@@ -44,7 +47,13 @@ body{
   right: 16px;
   }
   
-  
+  .pre_container .pre_story{
+    font-size: medium;
+    color: #c21a1a;
+    display: block;
+text-align: center;  }
+
+
   .container {
     /* background-color: pink; */
     /* width: 900px; */
@@ -106,7 +115,7 @@ body{
     font-weight:bold;
     font-size: 24px;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 50px;
     margin-bottom: 10px;
   }
   
@@ -136,6 +145,7 @@ body{
     text-align: center;
     display: flex;
     justify-content: center;
+    margin-bottom: 32px;
   }
   
   .wrapMain>ul{
@@ -462,14 +472,40 @@ commonでまとめたい */
   }
 
 
-    .oniGroup{
+/* 詳細detail */
+.etcDetail ul{
+  list-style: none;
+
+}
+
+
+.etcDetail p{
+padding-left: 20px;
+}
+/* 敵キャラ */
+
+.etcDetail .putioniWrapper img{
+  margin-left: 30px;
+}
+
+section .etcDetail>h2{
+  font-weight:bold;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 10px;
+}
+
+    .oniGroup,.itemGroup{
   
       position: relative;
       /* top:10px;
       left:10px; */
       height: 20px;
       width: 279px;
-      background-color: rgb(114, 170, 216);
+      /* background-color: rgb(114, 170, 216); */
+      border: 10px solid rgb(114, 170, 216);
+      border-radius: 20%;
       text-align: center;
       font-size: large;
       margin: auto;
@@ -479,28 +515,55 @@ commonでまとめたい */
     .oniSubWrapper{
       display: flex;
       justify-content: center;
+      width:100%;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 50px;
+
     }
   
     .oniGroup::before{
       font-size: small;
       content: "あのお馴染みの";
       position: absolute;
-      top:0;
+      top:-20px;
       left:0;
       padding: 0.2em;
-      background-color: brown;
+      background-color: rgb(235, 42, 42);
+      border-radius: 30%;
     }
 
-    .oniSubWrapper img{
-      width: 100px;
-      height: auto;
+
+    .oniWrapper .oniSubWrapper img{
+      width:70%;
+      height:auto;
     }
 
-    .teki_charaWrapper{
+    /* .teki_charaWrapper{
+      margin-bottom: 30px;
+    } */
+
+    .putioniWrapper .oniSubWrapper img{
+      padding-top: 20px;
+      width:40%;
+      height:auto;
+      margin-bottom: 10px;
+    }
+
+    .itemWrapper{
+      display: flex;
+      justify-content: center;
+
+      flex-direction: row;
+      flex-wrap: wrap;
+      width:100%;
+      margin: 0;
+      padding: 0;
+      margin-top: 40px;
       margin-bottom: 50px;
-    }
+      }
 
-    .putioniWrapper img{
-      width: 50px;
-      height: auto;
-    }
+      .oniWrapper .itemWrapper img{
+        width:70%;
+        height:auto;
+      }
