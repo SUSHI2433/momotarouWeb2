@@ -4,7 +4,6 @@ body{
     /* background-color: rgba(34, 100, 39, 0.322); */
     font-family:"MS Pゴシック",sans-serif;
     /* font-family: Verdana, sans-serif; */
-  
   }
   
   header{
@@ -133,17 +132,20 @@ body{
   
   .wrapMain>ul{
     /* background-color: rgba(145, 79, 17, 0.623); */
-    /* border: 10px solid rgba(51, 51, 51, 0.685);
-    border-radius: 10%; */
+    border: 10px solid rgba(51, 51, 51, 0.685);
+    border-radius: 10%;
    display:flex ;
    flex-wrap: wrap;
     flex-direction:row;
+    /* width: 80%; */
+    margin: 10%;
     /* width: 1500px; */
   
   }
   .wrapMain{
     display: inline-block;
     text-align: left;
+    
   }
   
   
@@ -393,7 +395,7 @@ body{
     .sp-menu{
       display: none;
     }
-  }
+  
   
   .pc-menu a:hover{
     background-color: rgba(51, 51, 51, 0.384);
@@ -408,25 +410,19 @@ body{
     text-decoration: none;
   }
   
-  /* .wrapMain>ul{
-    width: 200px;
-  } */
-  
-  
-  @media(min-width:600px){
-    .wrapMain>ul{
-      /* width:750px; */
-      width:631px;
 
-    }
-  
+  /* pc */
     .wrapMain>ul{
+      width:631px;
       /* background-color: rgba(145, 79, 17, 0.623); */
-      border: 10px  solid rgba(73, 22, 211, 0.685);
+      border: 10px  solid rgba(171, 231, 31, 0.685);
       border-radius: 10%;
-    }
+    /* } */
     }
   
+  }
+
+
     .oniGroup{
   
       position: relative;
@@ -454,4 +450,18 @@ body{
       left:0;
       padding: 0.2em;
       background-color: brown;
+    }
+
+    .oniSubWrapper img{
+      width: 100px;
+      height: auto;
+    }
+
+    .teki_charaWrapper{
+      margin-bottom: 50px;
+    }
+
+    .putioniWrapper img{
+      width: 50px;
+      height: auto;
     }
