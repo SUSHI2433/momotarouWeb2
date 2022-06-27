@@ -6,6 +6,11 @@ body{
     /* font-family: Verdana, sans-serif; */
   }
   
+
+
+
+  
+  /* ヘッダー */
   header{
     background-color: #c21a1a;
     padding-top: 32px;
@@ -15,6 +20,7 @@ body{
     padding: 0 16px;
   }
   
+  /* ぼくの世界わエトワールﾄﾞ　タイトル */
   header h1{
     color: rgb(0, 0, 0);
     line-height: 64px;
@@ -22,6 +28,8 @@ body{
   }
   
   
+
+
   
   .sp-menu{
     margin-left: auto;
@@ -39,7 +47,7 @@ body{
   
   .container {
     /* background-color: pink; */
-    width: 900px;
+    /* width: 900px; */
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -87,7 +95,7 @@ body{
   }
   
   .works {
-    width: 600px;
+    /* width: 600px; */
     margin-left: auto;
     margin-right: auto;
   
@@ -132,7 +140,7 @@ body{
   
   .wrapMain>ul{
     /* background-color: rgba(145, 79, 17, 0.623); */
-    border: 10px solid rgba(51, 51, 51, 0.685);
+    border: 10px solid rgba(68, 126, 126, 0.685);
     border-radius: 10%;
    display:flex ;
    flex-wrap: wrap;
@@ -150,20 +158,21 @@ body{
   
   
   .charaWrap{
-    margin-left:auto;
-    margin-right: auto;
+    margin-left:0 auto;
+    margin-right:0 auto;
   }
   
   .charaWrap>li{
   list-style: none;
   flex-basis:100px;
   /* background-color: rgba(255, 0, 0, 0.808); */
-  margin-bottom:8px;
-  margin-top:2px;
+  margin: 1px;
+
+  margin-bottom:100px;
+  margin-top:10px;
   } 
   
   .etoImage{
-    margin-right: auto;
     padding: 0;
     margin: 0;
   list-style: none;
@@ -176,11 +185,37 @@ body{
   opacity: 1;
   /* background-color: cadetblue; */
   cursor: pointer;
+display: flex;
+  flex-direction:column;
+  margin-top: 100px;
+
   }
   
-  .etoImage img{width: 80%;
-  height: 80%;}
+  .etoImage img{
+  width: 80%;
+  height: 80%;
+  /* margin-right: 250px;   */
+}
   
+  /* えとたちのクリックボタン */
+  .etoImage>p{
+    position: absolute;
+    bottom:-15px;
+    right: 1px;
+    color: #c21a1a;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid  chocolate;
+    font-weight:bolder;
+    opacity: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+
+
   .etoImage.hoverImage{
     background: rgba(235, 55, 10,0.2);
    /* animation: pulsation .7s alternate infinite;  */
@@ -199,39 +234,17 @@ body{
     100% { transform: scale(1.1); }
   }
   
-  /* えとたちのクリックボタン */
-  .etoImage>p{
-    position: absolute;
-    bottom:-15px;
-    right: 1px;
-    color: #c21a1a;
-    /* padding-left: 100px; */
-  /* background-color: chocolate; */
-    width: 0;
-    height: 0;
-    /* border-right: 30px solid transparent; */
-  
-    border-left: 30px solid transparent;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid  chocolate;
-    font-weight:bolder;
-    opacity: 1;
-    /* border-bottom-right-radius: 10px 10px; */
-      /* border-bottom-right-radius: 10%; */
-    /* transform: rotate(-10deg); */
-  pointer-events: none;
-    user-select: none;
-  }
-  
+
 
   
   .charaWrap>li>h5{
   /* margin-top: 2px; */
   text-align: center;
-  line-height: 100px;
+  line-height: 20px;
   /* background-color: chartreuse; */
-  margin: 0px;
+  /* margin: 0px; */
   padding: 0px;
+  /* margin-right:10px ; */
   /* color: rgb(224, 17, 17);
   text-shadow:
     0 0 7px #fff,
@@ -337,7 +350,7 @@ body{
   
   .titleWrapper{
     padding-top: 100px;
-    width: 196px;
+    /* width: 196px; */
     height: 250px;
   /* まだわからないけど、フレックスボックス */
   display: flex;
@@ -381,27 +394,46 @@ body{
     display: none;
   }
   
-  @media(min-width:600px){
+/* 上は共通↑のとことがある
+commonでまとめたい */
+
+  /* レスポンシブデザイン */
+  @media ( min-width : 600px) 
+  /* 1ばん小さくて600。ということで、600まではこの処理 */
+  /* and ( max-width: 800px) */
+  {
+    /* パソコン画面のものを消す */
+
+    body{
+      background-color: rgba(209, 214, 189, 0.678);
+    }
+
     .pc-menu{
       display: block;
       margin-left: auto;
     }
+
     .pc-menu ul{
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
     }
+
+    
+    .pc-menu li{
+     margin-left: 5px;
+    }
     .sp-menu{
       display: none;
     }
   
   
-  .pc-menu a:hover{
-    background-color: rgba(51, 51, 51, 0.384);
+  .sp-menu a:hover{
+    background-color: rgba(252, 23, 23, 0.384);
   }
   
-  .pc-menu a{
+  .sp-menu a{
     display: block;
     width:70px;
     line-height: 34px;
@@ -413,13 +445,20 @@ body{
 
   /* pc */
     .wrapMain>ul{
-      width:631px;
+      /* width:631px; */
       /* background-color: rgba(145, 79, 17, 0.623); */
-      border: 10px  solid rgba(171, 231, 31, 0.685);
+      border: 10px  solid rgba(221, 61, 13, 0.685);
       border-radius: 10%;
+      margin: 0;
     /* } */
     }
   
+    body{
+      width: 100%;
+    }
+    .wrapMain{
+      width: 90%;
+    }
   }
 
 
