@@ -38,3 +38,8 @@ close.addEventListener('click',()=>{
 // window.onload = function() {
 //     alert("ページが読み込まれました！");
 //   };
+
+
+addEventListener('hover',(e)=>{
+    e.target.classList.add('appear')
+})
